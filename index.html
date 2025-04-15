@@ -3,13 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Landing Page - Conteúdo Exclusivo</title>
+  <title>Clube Exclusivo 18+</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom, #0d1117, #1a0a1f);
       color: #fff;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    .container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+    .container button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .container button:hover {
+      background-color: #ea580c;
+    }
+
+    #full-content {
+      display: none;
     }
     header video {
       width: 100%;
@@ -73,15 +108,9 @@
       animation: fadeInUp 1s ease forwards;
       max-width: 220px;
     }
-    .plan:nth-child(1) {
-      animation-delay: 0.8s;
-    }
-    .plan:nth-child(2) {
-      animation-delay: 1s;
-    }
-    .plan:nth-child(3) {
-      animation-delay: 1.2s;
-    }
+    .plan:nth-child(1) { animation-delay: 0.8s; }
+    .plan:nth-child(2) { animation-delay: 1s; }
+    .plan:nth-child(3) { animation-delay: 1.2s; }
     .plan:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -114,90 +143,53 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-
-    /* Verificação de idade */
-    #age-verification {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0d1117;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-    #age-verification h1 {
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    #age-verification p {
-      color: #ccc;
-      margin-bottom: 30px;
-      max-width: 400px;
-    }
-    #age-verification button {
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      background-color: #f97316;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #age-verification button:hover {
-      background-color: #ea580c;
-    }
   </style>
 </head>
 <body>
 
-  <div id="age-verification">
-    <h1>Atenção: Conteúdo +18</h1>
-    <p>Esta página contém conteúdo destinado a maiores de 18 anos. Ao continuar, você confirma que tem idade legal para visualizar este material.</p>
-    <button onclick="document.getElementById('age-verification').style.display='none'">Sou maior de 18 anos</button>
+  <div id="entry" class="container">
+    <h1>Bem-vindo ao Clube Exclusivo</h1>
+    <p>Esta área é dedicada a maiores de 18 anos. Ao clicar no botão abaixo, você confirma que tem idade legal para acessar conteúdos exclusivos e reservados.</p>
+    <button onclick="document.getElementById('entry').style.display='none'; document.getElementById('full-content').style.display='block';">Quero Acessar</button>
   </div>
 
-  <header>
-    <video autoplay muted loop>
-      <source src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video01.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo em HTML5.
-    </video>
-  </header>
+  <div id="full-content">
+    <header>
+      <video autoplay muted loop>
+        <source src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video01.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo em HTML5.
+      </video>
+    </header>
 
-  <section>
-    <h2 style="text-align:center; padding: 20px;">Mais Vistos</h2>
-    <div class="carousel">
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video02.mp4" controls autoplay muted loop></video>
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video03.mp4" controls autoplay muted loop></video>
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video04.mp4" controls autoplay muted loop></video>
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video05.mp4" controls autoplay muted loop></video>
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video06.mp4" controls autoplay muted loop></video>
-      <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video07.mp4" controls autoplay muted loop></video>
-    </div>
-  </section>
+    <section>
+      <h2 style="text-align:center; padding: 20px;">Mais Vistos</h2>
+      <div class="carousel">
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video02.mp4" controls autoplay muted loop></video>
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video03.mp4" controls autoplay muted loop></video>
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video04.mp4" controls autoplay muted loop></video>
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video05.mp4" controls autoplay muted loop></video>
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video06.mp4" controls autoplay muted loop></video>
+        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video07.mp4" controls autoplay muted loop></video>
+      </div>
+    </section>
 
-  <footer>
-    <div class="plans">
-      <div class="plan">
-        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video01.mp4" autoplay muted loop></video>
-        <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
+    <footer>
+      <div class="plans">
+        <div class="plan">
+          <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video01.mp4" autoplay muted loop></video>
+          <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
+        </div>
+        <div class="plan">
+          <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video05.mp4" autoplay muted loop></video>
+          <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
+        </div>
+        <div class="plan">
+          <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video06.mp4" autoplay muted loop></video>
+          <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
+        </div>
       </div>
-      <div class="plan">
-        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video05.mp4" autoplay muted loop></video>
-        <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
-      </div>
-      <div class="plan">
-        <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video06.mp4" autoplay muted loop></video>
-        <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
 </body>
 </html>
