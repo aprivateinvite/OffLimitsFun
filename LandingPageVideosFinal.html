@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landing Page - Conteúdo Exclusivo</title>
   <style>
     body {
@@ -104,7 +104,7 @@
       font-size: 0.85rem;
       transition: background-color 0.3s ease;
       width: 100%;
-      animation: blinkEffect 2s ease-in-out 3;
+      animation: blinkEffect 2s ease-in-out 6;
       animation-fill-mode: forwards;
     }
     .plan button:hover {
@@ -114,9 +114,54 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
+
+    /* Verificação de idade */
+    #age-verification {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d1117;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+    #age-verification h1 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    #age-verification p {
+      color: #ccc;
+      margin-bottom: 30px;
+      max-width: 400px;
+    }
+    #age-verification button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #age-verification button:hover {
+      background-color: #ea580c;
+    }
   </style>
 </head>
 <body>
+
+  <div id="age-verification">
+    <h1>Atenção: Conteúdo +18</h1>
+    <p>Esta página contém conteúdo destinado a maiores de 18 anos. Ao continuar, você confirma que tem idade legal para visualizar este material.</p>
+    <button onclick="document.getElementById('age-verification').style.display='none'">Sou maior de 18 anos</button>
+  </div>
 
   <header>
     <video autoplay muted loop>
@@ -145,7 +190,7 @@
       </div>
       <div class="plan">
         <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video05.mp4" autoplay muted loop></video>
-        <a href="http://t.me/vip_offlimitsbot"><button>Assine Já</button></a>
+        <a href="#"><button>Assine Já</button></a>
       </div>
       <div class="plan">
         <video src="https://cdn.jsdelivr.net/gh/S4rtoriocf/OffLimitsFun/Videos/Video06.mp4" autoplay muted loop></video>
